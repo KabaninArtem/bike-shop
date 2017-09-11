@@ -1,0 +1,89 @@
+header {
+    padding: 20px 165px;
+    height: 900px;
+    background: url("../img/background.jpg") top center no-repeat;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row a {
+    text-decoration: none;
+
+}
+
+.row .menu li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.row .menu:after {
+    display: block;
+    content: ' ';
+}
+
+.row .menu li {
+    position: relative;
+}
+
+.row .menu li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.row .menu li:last-child {
+    vertical-align: middle;
+}
+
+.row .menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+
+}
+
+.row .menu > li:not(:last-child) > a:hover {
+    background-color: #fcff19;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.row .menu > li:first-child > a:hover {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.row .menu .submenu {
+    display: none;
+    position: absolute;
+    width: 190px;
+    top: 35px;
+    left: 0;
+    border: 1px solid transparent;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #fcff19;
+}
+
+.row .submenu li {
+    display: block;
+}
+
+.row .submenu li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    background-color: #fcff19;
+    text-decoration: none;
+}
+
+.row .menu li:hover .submenu {
+    display: block;
+}
