@@ -1,6 +1,19 @@
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 55px;
+    text-transform: uppercase;
+}
+
+header,
+footer {
+    padding: 20px 50px;
+}
+
 header,
 main .categories-block,
 main .gallery-block,
+main .contact-block,
 footer {
     padding-left: 20px;
     padding-right: 20px;
@@ -9,67 +22,66 @@ footer {
 
 .row {
     display: flex;
-
     max-width: 1100px;
     width: 100%;
 }
 
-/*HEADER*/
-
-header {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 50px;
-    height: 940px;
-    background: url('../img/background.jpg') top center no-repeat;
-    align-content: space-between;
+.button {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 15px 0;
+    background-color: #b7b7b7;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
 }
 
-header .row {
+.row.header {
     justify-content: space-between;
     align-self: center;
 }
 
-header .row .menu li {
+.row.header .menu li {
     font-size: 15px;
     display: inline-block;
     text-transform: uppercase;
 }
 
-header .row .menu li {
+.row.header .menu li {
     position: relative;
 }
 
-header .row .menu li:not(:last-child) {
+.row.header .menu li:not(:last-child) {
     margin-right: 20px;
 }
 
-header .row .menu li:last-child {
+.row.header .menu li:last-child {
     vertical-align: middle;
 }
 
-header .row .menu li a {
+.row.header .menu li a {
     display: block;
     padding: 10px;
     text-decoration: none;
     color: white;
 }
 
-header .row .menu > li:not(:last-child) > a:hover {
+.row.header .menu > li:not(:last-child) > a:hover {
     text-decoration: none;
     color: black;
     border-radius: 5px;
     background-color: #fcff19;
 }
 
-header .row .menu > li:first-child > a:hover {
+.row.header .menu > li:first-child > a:hover {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-header .row .menu .submenu {
+.row.header .menu .submenu {
     position: absolute;
     top: 35px;
     left: 0;
@@ -82,19 +94,29 @@ header .row .menu .submenu {
     background-color: #fcff19;
 }
 
-header .row .submenu li {
+.row.header .submenu li {
     display: block;
 }
 
-header .row .submenu li a {
+.row.header .submenu li a {
     display: block;
     padding: 10px;
     color: black;
     background-color: #fcff19;
 }
 
-header .row .menu li:hover .submenu {
+.row.header .menu li:hover .submenu {
     display: block;
+}
+
+/*HEADER*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 940px;
+    background: url('../img/background.jpg') top center no-repeat;
+    align-content: space-between;
 }
 
 header .row:nth-child(2) {
@@ -147,14 +169,6 @@ main .gallery-block {
     /*height: 558px;*/
     height: auto;
     background: url('../img/category_background.jpg') top center no-repeat;
-}
-
-main .categories-block h2,
-main .gallery-block h2 {
-    font-size: 28px;
-    font-weight: bold;
-    padding-top: 55px;
-    text-transform: uppercase;
 }
 
 main .categories-block .row {
@@ -261,12 +275,6 @@ main .gallery-block .row .gallery-block__item .price-block {
     justify-content: space-between;
 }
 
-main .gallery-block .row .gallery-block__item .price-block .row a {
-    font-size: 12px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
 main .gallery-block .row .gallery-block__item .price-block .row:first-child {
     width: auto;
     flex-direction: column;
@@ -285,6 +293,7 @@ main .gallery-block .row .gallery-block__item .price-block .row a:first-child {
     box-sizing: border-box;
     border: 1px solid black;
     border-radius: 10px;
+    text-decoration: none;
 
 }
 
@@ -295,9 +304,6 @@ main .gallery-block .row .gallery-block__item .price-block .row a:first-child  i
 
 main .gallery-block .row .gallery-block__item .price-block .row a:last-child {
     padding: 15px 35px;
-    border-radius: 10px;
-    color: #ffffff;
-    background-color: #b7b7b7;
 }
 
 main .gallery-block .row .gallery-block__item .price-block .row a:last-child:hover {
@@ -305,3 +311,64 @@ main .gallery-block .row .gallery-block__item .price-block .row a:last-child:hov
     color: #fcff19;
 }
 
+main .contact-block {
+    display: flex;
+    height: 634px;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    background: url("../img/contact_background.jpg") top center no-repeat;
+}
+main .contact-block p {
+    margin-top: 70px;
+    font-size: 16px;
+}
+main .contact-block .row {
+    max-width: 450px;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .contact-block .row input {
+    height: 40px;
+}
+
+main .contact-block .row input,
+main .contact-block .row textarea {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    font-style: italic;
+}
+main .contact-block .row input:nth-child(3) {
+    font-style: normal;
+}
+main .contact-block .row input:focus,
+main .contact-block .row textarea:focus {
+    outline: none;
+}
+
+main .contact-block .row .name-block {
+    display: flex;
+    justify-content: space-between;
+}
+main .contact-block .row .name-block input {
+    max-width: 210px;
+    width: 100%;
+}
+
+main .contact-block .row textarea {
+    resize: none;
+}
+footer {
+    display: flex;
+    justify-content: center;
+   background-color: #fcff19;
+}
+footer .row.header .menu .menu_item a {
+    font-weight: bold;
+    color: black;
+}
