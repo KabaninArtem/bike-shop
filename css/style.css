@@ -253,7 +253,6 @@ main .categories-block .row .categories-block__item .action a {
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
-
 }
 
 main .gallery-block {
@@ -305,16 +304,21 @@ main .gallery-block .row .gallery-block__item .price-block .row:last-child {
     align-items: baseline;
 }
 
-main .gallery-block .row .gallery-block__item .price-block .row a:first-child {
-    margin-right: 20px;
+main .gallery-block .row .gallery-block__item .price-block .row select {
+    width: 140px;
+    margin-right: 15px;
     padding: 10px;
-    max-width: 120px;
-    width: 100%;
-    color: black;
-    box-sizing: border-box;
-    border: 1px solid black;
     border-radius: 10px;
-    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    overflow: hidden;
+    background: url("../img/option_arrow.png") no-repeat right;
+    -webkit-appearance: none;
+}
+
+main .gallery-block .row .gallery-block__item .price-block .row select:focus {
+    outline: none;
 }
 
 main .gallery-block .row .gallery-block__item .price-block .row a:first-child img {
