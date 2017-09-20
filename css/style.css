@@ -22,7 +22,7 @@ footer {
 
 .row {
     display: flex;
-    max-width: 1100px;
+    max-width: 2100px;
     width: 100%;
 }
 
@@ -116,6 +116,7 @@ header {
     flex-direction: column;
     height: 940px;
     background: url('../img/background.jpg') top center no-repeat;
+    background-size: cover;
     align-content: space-between;
 }
 
@@ -166,15 +167,13 @@ main .gallery-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*height: 558px;*/
-    height: auto;
+    height: 628px;
     background: url('../img/category_background.jpg') top center no-repeat;
+    background-size: cover;
 }
 
 main .categories-block .row {
-    max-width: 1100px;
     width: 100%;
-    flex-wrap: wrap;
     margin: auto;
     align-self: center;
     justify-content: space-around;
@@ -182,68 +181,79 @@ main .categories-block .row {
 
 main .categories-block .row .categories-block__item {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 346px;
-    height: 288px;
-    background: url('../img/category_photo1.jpg') top center no-repeat;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
-main .categories-block .row .categories-block__item:nth-child(2) {
-    background: url('../img/category_photo2.jpg') top center no-repeat;
+main .categories-block .row .categories-block__item:not(:last-child) {
+    margin-right: 20px;
 }
 
-main .categories-block .row .categories-block__item:last-child {
-    background: url('../img/category_photo3.jpg') top center no-repeat;
+main .categories-block .row .categories-block__item img {
+    width: 100%;
+    height: auto;
 }
 
-main .categories-block .row .categories-block__item h3 {
+main .categories-block .row .categories-block__item .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    display: none;
+    border-right: 346px solid transparent;
+    border-bottom: 291px solid rgba(252, 255, 25, 0.2);
+}
+
+main .categories-block .row .categories-block__item:hover .hover-image {
+    display: block;
+}
+
+main .categories-block .row .categories-block__item .info-block {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -125px;
+    text-align: center;
+}
+
+main .categories-block .row .categories-block__item .info-block h3 {
     font-size: 15px;
     text-transform: uppercase;
     color: #fcff19;
 }
 
-main .categories-block .row .categories-block__item p {
+main .categories-block .row .categories-block__item .info-block p {
     font-size: 15px;
     margin: 20px 0;
     color: #fff;
 }
 
-main .categories-block .row .categories-block__item a {
-    font-size: 13px;
-    font-weight: 100;
+main .categories-block .row .categories-block__item .action {
     position: absolute;
-    z-index: 2;
-    top: 75%;
-    left: 50%;
-    visibility: hidden;
+    top: 0;
+    display: none;
+}
+
+main .categories-block .row .categories-block__item:hover .action {
+    display: flex;
+    margin-top: 59%;
+    height: 30%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+main .categories-block .row .categories-block__item .action a {
+    font-size: 12px;
+    font-weight: 400;
     box-sizing: border-box;
-    margin-left: -60px;
-    padding: 12px 18px;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
-    border: 2px solid white;
-    border-radius: 7px;
-}
 
-main .categories-block .row .categories-block__item:hover a {
-    visibility: visible;
-}
-
-main .categories-block .row .categories-block__item .triangle-bottom-left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    border-right: 346px solid transparent;
-    border-bottom: 288px solid rgba(101, 101, 62, .5);
-}
-
-main .categories-block .row .categories-block__item:hover .triangle-bottom-left {
-    display: block;
 }
 
 main .gallery-block {
@@ -254,17 +264,25 @@ main .gallery-block {
 main .gallery-block .row {
     max-width: 1875px;
     width: 100%;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
-main .gallery-block .row .gallery-block__item h3 {
+main .gallery-block .row .gallery-block__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+main .gallery-block .row .gallery-block__item img {
+    max-width: 100%;
+    height: auto;
+}
+
+main .gallery-block .row .gallery-block__item .price-block .row h3 {
     font-size: 15px;
     font-weight: bold;
     color: black;
 }
 
-main .gallery-block .row .gallery-block__item p {
+main .gallery-block .row .gallery-block__item .price-block .row p {
     font-size: 15px;
     font-weight: lighter;
     color: black;
@@ -277,28 +295,30 @@ main .gallery-block .row .gallery-block__item .price-block {
 
 main .gallery-block .row .gallery-block__item .price-block .row:first-child {
     width: auto;
+    margin-right: 25px;
     flex-direction: column;
 }
 
 main .gallery-block .row .gallery-block__item .price-block .row:last-child {
-    width: auto;
+    width: 100%;
     justify-content: flex-end;
     align-items: baseline;
 }
 
 main .gallery-block .row .gallery-block__item .price-block .row a:first-child {
     margin-right: 20px;
-    padding: 11px 15px;
+    padding: 10px;
+    max-width: 120px;
+    width: 100%;
     color: black;
     box-sizing: border-box;
     border: 1px solid black;
     border-radius: 10px;
     text-decoration: none;
-
 }
 
-main .gallery-block .row .gallery-block__item .price-block .row a:first-child  img {
-    margin-left: 43px;
+main .gallery-block .row .gallery-block__item .price-block .row a:first-child img {
+    float: right;
     vertical-align: middle;
 }
 
@@ -318,11 +338,14 @@ main .contact-block {
     flex-direction: column;
     align-items: center;
     background: url("../img/contact_background.jpg") top center no-repeat;
+    background-size: cover;
 }
+
 main .contact-block p {
     margin-top: 70px;
     font-size: 16px;
 }
+
 main .contact-block .row {
     max-width: 450px;
     margin: auto;
@@ -343,9 +366,11 @@ main .contact-block .row textarea {
     border-radius: 10px;
     font-style: italic;
 }
+
 main .contact-block .row input:nth-child(3) {
     font-style: normal;
 }
+
 main .contact-block .row input:focus,
 main .contact-block .row textarea:focus {
     outline: none;
@@ -355,6 +380,7 @@ main .contact-block .row .name-block {
     display: flex;
     justify-content: space-between;
 }
+
 main .contact-block .row .name-block input {
     max-width: 210px;
     width: 100%;
@@ -363,11 +389,13 @@ main .contact-block .row .name-block input {
 main .contact-block .row textarea {
     resize: none;
 }
+
 footer {
     display: flex;
     justify-content: center;
-   background-color: #fcff19;
+    background-color: #fcff19;
 }
+
 footer .row.header .menu .menu_item a {
     font-weight: bold;
     color: black;
