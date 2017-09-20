@@ -294,7 +294,7 @@ main .gallery-block .row .gallery-block__item .price-block {
 
 main .gallery-block .row .gallery-block__item .price-block .row:first-child {
     width: auto;
-    margin-right: 25px;
+    margin-right: 15px;
     flex-direction: column;
 }
 
@@ -305,9 +305,11 @@ main .gallery-block .row .gallery-block__item .price-block .row:last-child {
 }
 
 main .gallery-block .row .gallery-block__item .price-block .row select {
-    width: 140px;
-    margin-right: 15px;
-    padding: 10px;
+    max-width: 120px;
+    width: 100%;
+    height: 35px;
+    margin-right: 10px;
+    padding: 0 5px;
     border-radius: 10px;
     text-transform: uppercase;
     font-weight: bold;
@@ -321,13 +323,9 @@ main .gallery-block .row .gallery-block__item .price-block .row select:focus {
     outline: none;
 }
 
-main .gallery-block .row .gallery-block__item .price-block .row a:first-child img {
-    float: right;
-    vertical-align: middle;
-}
-
 main .gallery-block .row .gallery-block__item .price-block .row a:last-child {
-    padding: 15px 35px;
+    max-width: 75px;
+    width: 100%;
 }
 
 main .gallery-block .row .gallery-block__item .price-block .row a:last-child:hover {
