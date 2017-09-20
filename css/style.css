@@ -15,8 +15,8 @@ main .categories-block,
 main .gallery-block,
 main .contact-block,
 footer {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -128,7 +128,6 @@ header .row:nth-child(2) {
 
 header .row:nth-child(2) h1 {
     font-size: 50px;
-    font-style: bold;
     text-transform: uppercase;
     color: white;
 }
